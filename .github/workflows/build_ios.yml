@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.19.x'
@@ -20,7 +20,7 @@ jobs:
           mkdir Payload
           cp -r build/ios/iphoneos/Runner.app Payload/
           zip -r AeroPulse.zip Payload
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ios-app
           path: AeroPulse.zip
